@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Redirige les erreurs vers stderr, permet d'exécuter le code en shell
+exec 1>&2
+
+#-------------------------Récupère tous les fichier js sauf node_modules------------------------------------
+files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.js$' | grep -v node_modules)
+if [ -z "$files" ]; then #Si aucun fichier js n'est trouvé
+  exit 0
+fi
+
+#-------------------------Vérifie tous les fichiers js trouvé------------------------------------
+failed=0 #variables de suivi d'erreur
+for file in $files; do #ce for parcours les fichiers js en exécutant eslint sur chaque fichier
+  eslint "$file"
+  if [ $? -ne 0 ]; then #Si le code de sortie est différent de 0, alors y a des erreurs
+    echo "ESLint a trouvé des erreurs dans le fichier $file"
+    failed=1 # change sa valeur
+  fi
+done
+
+#-------------------------Affiche en cas d'erreur--------------------------------------
+if [ $failed -eq 1 ]; then # Si failed = 1, le script affichera l'echo ci dessous
+  echo "Linting a échoué, commit annulé"
+  exit 1
+fi
+
+exit 0
