@@ -1,0 +1,24 @@
+name: Linting
+
+on:
+  push:
+    branches: [ master, dev ]
+  pull_request:
+    branches: [ master, dev ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest #runner Ubuntu
+
+    steps:
+      - uses: actions/checkout@v2 #clone le depot
+      - name: Set up Node.js  #Configure l'environnement de node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.16.1'
+
+      - name: Install Dependencies  #Install les dépendances (comme eslint)
+        run: npm install
+
+      - name: Run ESLint  #Exécute eslint sur tous les fichiers js
+        run: npx eslint .
