@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: '18.16.1'
 
+      - name: Clean npm cache
+        run: npm cache clean --force
+
       - name: Install Dependencies  #Install les dépendances (comme eslint)
         run: npm install
 
