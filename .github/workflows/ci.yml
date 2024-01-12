@@ -23,5 +23,5 @@ jobs:
       - name: Install Dependencies  #Install les dépendances (comme eslint)
         run: npm install
 
-      - name: Run ESLint  #Exécute eslint sur tous les fichiers js
-        run: npm run lint
+      - name: Run ESLint  # va lancer Eslint directement
+        run: ./node_modules/.bin/eslint .
