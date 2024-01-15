@@ -28,7 +28,9 @@ Ce projet suit le modèle Git flow avec des branches dédiées pour les fonction
 - **Configuration pour Push sur Deux Remote** : Permet de pousser les changements sur deux dépôts distants.
 
 ## Installation et Utilisation
-- **Hook de Linting JavaScript** : Le hook qui vérifie les fichiers JavaScript se trouve dans le fichier `hooksLinter.txt`. Pour l'utiliser, copiez et collez son contenu dans votre fichier `.git/hooks/pre-commit`.
+- **Hook de Linting JavaScript** : Le hook qui vérifie les fichiers JavaScript se trouve dans le fichier `hooksLinter.txt`. 
+- Pour l'utiliser, copiez et collez son contenu dans votre fichier `.git/hooks/pre-commit`.
+- **Deuxième repo (pour push sur deux remote)** : https://github.com/CHANG-Toma/ProjetFinalGit-Depot2.git
 
 ## Contribuer
 Pour contribuer à ce projet, veuillez lire [CONTRIBUTING.md](./CONTRIBUTING.md) pour connaître les détails de notre code de conduite et le processus de soumission des pulls requests.
