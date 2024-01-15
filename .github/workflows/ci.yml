@@ -17,15 +17,14 @@ jobs:
         with:
           node-version: '18.16.1'
 
-      - name: Clean npm cache
+      - name: Clean npm cache #nettoyage du cache
         run: npm cache clean --force
 
       - name: Install Dependencies  #Install les dépendances (comme eslint)
         run: npm install
 
-      - name: Change permissions
+      - name: Change permissions  #Ajout de permission d'exécution
         run: chmod +x ./node_modules/.bin/eslint
 
       - name: Run ESLint
         run: ./node_modules/.bin/eslint .
-
