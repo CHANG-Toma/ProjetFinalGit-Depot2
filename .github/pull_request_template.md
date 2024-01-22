@@ -18,7 +18,7 @@ Décrivez les changements que vous proposez.
 - [ ] Amélioration
 - [ ] Documentation
 
-## Comment cela a-t-il été testé?
+## Comment cela a-t-il été testé ?
 
 Décrivez les tests que vous avez effectués pour valider vos changements.
 
