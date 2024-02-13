@@ -1,0 +1,18 @@
+// Ajout du remote principal pour fetch et push
+
+git remote add origin https://github.com/CHANG-Toma/ProjetFinalGit.git
+git remote set-url --add --push origin https://github.com/CHANG-Toma/ProjetFinalGit.git
+
+
+// Ajout du second remote pour push uniquement
+git remote set-url --add --push origin https://github.com/CHANG-Toma/ProjetFinalGit-Depot2.git
+
+
+// Vérification
+git remote -v
+
+
+// Sortie envisagé :
+origin  https://github.com/CHANG-Toma/ProjetFinalGit.git (fetch)
+origin  https://github.com/CHANG-Toma/ProjetFinalGit.git (push)
+origin  https://github.com/CHANG-Toma/ProjetFinalGit-Depot2.git (push)
