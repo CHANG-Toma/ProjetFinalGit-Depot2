@@ -1,3 +1,23 @@
-# Fichiers de configuration du système et de l'éditeur
+# Répertoires de dépendances
+node_modules/
+vendor/
+
+# Fichiers d'environnement
+.env
+.env.local
+
+# Build outputs | fichier générer automatiquement
+/dist/
+/build/
+
+# Configuration des IDE
 .idea/
-*.log
+.vscode/
+
+# Fichiers du système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Autres répertoire et fichiers courant
+/log/
+/tmp/
